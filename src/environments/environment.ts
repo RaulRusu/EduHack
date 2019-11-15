@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    // tslint:disable-next-line:max-line-length
+    apiKey: 'AIzaSyDFfC6k-TJY0w6jFaCLELRs6I4duPwkIRI',
+    authDomain: 'bway-eduhack.firebaseapp.com',
+    databaseURL: 'https://bway-eduhack.firebaseio.com',
+    projectId: 'bway-eduhack',
+    storageBucket: 'bway-eduhack.appspot.com',
+    messagingSenderId: '817507969697'
+  }
 };
 
 /*
