@@ -15,6 +15,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import {IonicRatingModule} from 'ionic4-rating/dist';
 import {StarRatingModule} from 'ionic4-star-rating';
+import {NgCalendarModule} from 'ionic2-calendar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +28,8 @@ import {StarRatingModule} from 'ionic4-star-rating';
       AngularFireAuthModule,
       AngularFireDatabaseModule,
       IonicRatingModule,
-      StarRatingModule
+      StarRatingModule,
+      NgCalendarModule
   ],
   providers: [
     StatusBar,

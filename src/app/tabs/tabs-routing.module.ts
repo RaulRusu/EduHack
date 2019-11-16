@@ -24,7 +24,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../profile-mentor/profile-mentor.module').then(m => m.ProfileMentorPageModule)
           }
         ]
       },

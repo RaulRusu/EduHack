@@ -28,6 +28,14 @@ const routes: Routes = [
   },  {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'profile-mentor',
+    loadChildren: () => import('./profile-mentor/profile-mentor.module').then( m => m.ProfileMentorPageModule)
+  },
+  {
+    path: 'home-mentor',
+    loadChildren: () => import('./home-mentor/home-mentor.module').then( m => m.HomeMentorPageModule)
   }
 
 
