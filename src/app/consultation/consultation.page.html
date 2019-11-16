@@ -7,7 +7,7 @@
 <ion-content padding class="backgroundIMG">
   <ion-card class="mainCard" >
     <ion-card-content>
-      <ion-img class="imageCentered" src="../../assets/img/mathematics.png"></ion-img>
+      <ion-img class="imageCentered" src="../../assets/img/{{consultationInformation.subject}}.png"></ion-img>
 
       <ion-item text-center class="domainCentered">
         <ion-label>Mathematics</ion-label>
@@ -17,7 +17,7 @@
     <ion-item class="consultationCard">
       <ion-icon size="large" name="contact"></ion-icon>
       <ion-label>
-        Razvan Horhat - <div class="domainBold">Mathematics</div>
+        {{mentorDetails.firstName}} {{mentorDetails.lastName}} - <div class="domainBold">{{consultationInformation.subject}}</div>
         <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
         <!--          </rating>-->
 
@@ -36,12 +36,12 @@
     <ion-list>
       <ion-item float-left>
         <div class="levelLeft">
-          Intermediate
+          {{consultationInformation.level}}
         </div >
       </ion-item>
       <ion-item float-right>
         <div class="classRight">
-          9 - 11
+          {{consultationInformation.clasa}}
         </div>
       </ion-item>
 
