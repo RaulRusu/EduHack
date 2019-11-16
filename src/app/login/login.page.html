@@ -1,0 +1,44 @@
+
+
+<ion-content padding class="backgroundIMG">
+  <img src="assets/img/logoBWay.png" class="size">
+
+  <div class="onlyLogin">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="pass"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="flex LR_buttons">
+    <ion-button color="primary" class="buttons" outline round >Login</ion-button>
+    <ion-button color="primary" class="buttons" outline round >Sign Up</ion-button>
+  </div>
+
+  <div class="or_field flex">
+    <div class="line"></div>
+    <div class="or"> or </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="sup">
+    Sign up with
+  </div>
+
+  <div class="flex">
+    <ion-button icon-start color="facebook" class="buttons" round>
+      <ion-icon name="logo-facebook" ></ion-icon>
+      Facebook
+    </ion-button>
+
+    <ion-button icon-start color="google" class="buttons" round>
+      <ion-icon name="logo-google"></ion-icon>
+      Gmail
+    </ion-button>
+  </div>
+
+</ion-content>
