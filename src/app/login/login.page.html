@@ -1,22 +1,20 @@
-
-
 <ion-content padding class="backgroundIMG">
   <img src="assets/img/logoBWay.png" class="size">
 
   <div class="onlyLogin">
-    <ion-item>
-      <ion-label floating>Email</ion-label>
+    <ion-item class="email-pass">
+      <ion-label position="floating">Email</ion-label>
       <ion-input type="email" [(ngModel)]="email"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
+    <ion-item class="email-pass">
+      <ion-label position="floating">Password</ion-label>
       <ion-input type="password" [(ngModel)]="pass"></ion-input>
     </ion-item>
   </div>
 
   <div class="flex LR_buttons">
-    <ion-button color="primary" class="buttons" outline round >Login</ion-button>
-    <ion-button color="primary" class="buttons" outline round >Sign Up</ion-button>
+    <ion-button color="primary" class="buttons" shape="round" >Login</ion-button>
+    <ion-button color="primary" class="buttons" shape="round" >Sign Up</ion-button>
   </div>
 
   <div class="or_field flex">
@@ -30,14 +28,14 @@
   </div>
 
   <div class="flex">
-    <ion-button icon-start color="facebook" class="buttons" round>
-      <ion-icon name="logo-facebook" ></ion-icon>
+    <ion-button class="buttons facebook" fill="outline" color="blue" shape="round" >
+      <ion-icon name="logo-facebook" class="facebook" ></ion-icon>
       Facebook
     </ion-button>
 
-    <ion-button icon-start color="google" class="buttons" round>
-      <ion-icon name="logo-google"></ion-icon>
-      Gmail
+    <ion-button class="buttons linkedin" fill="outline" shape="round" color="blue">
+      <ion-icon name="logo-linkedin" class="linkedin"></ion-icon>
+      LinkedIn
     </ion-button>
   </div>
 

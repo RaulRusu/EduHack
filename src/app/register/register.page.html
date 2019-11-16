@@ -1,0 +1,47 @@
+
+<ion-content padding class="backgroundIMG">
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Last Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input type="email" [(ngModel)] = "email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Password</ion-label>
+      <ion-input type="password" [(ngModel)] = "passwordRegister"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Confirm Password</ion-label>
+      <ion-input type="password" [(ngModel)] = "passwordRegister2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Phone</ion-label>
+      <ion-input type="tel" [(ngModel)] = "phone"></ion-input>
+    </ion-item>
+
+    <ion-item text-center class="text" lines="none">
+      <ion-label color="dark"> Continue as a: </ion-label>
+    </ion-item>
+
+
+  <div class='some-page-wrapper'>
+    <div class='row'>
+      <div class='column'>
+        <ion-img  class="centerImage" src="../../assets/img/professor.png"></ion-img>
+        <div class="textType">Mentor</div>
+
+      </div>
+      <div class='column'>
+        <ion-img class="centerImage" src="../../assets/img/reading.png"></ion-img>
+        <div class="textType">Pupil</div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

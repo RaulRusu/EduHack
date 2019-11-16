@@ -14,9 +14,9 @@
   {
     margin: 20px 0 8px 0;
   }
-  .item
+  .email-pass
   {
-    background-color: transparent;
+    --background: none;
   }
   .flex
   {
@@ -63,4 +63,12 @@
       box-shadow: inset 0 -1px 0 0 #c0392b;;
     }
 
+  }
+
+  .facebook{
+    color: #3b5998;
+  }
+
+  .linkedin{
+    color: #0e76a8;
   }
