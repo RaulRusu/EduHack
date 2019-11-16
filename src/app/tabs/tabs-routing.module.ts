@@ -14,7 +14,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../home-user/home-user.module').then(m => m.HomeUserPageModule)
+                import('../home-user/home-user.module').then(m => m.HomeUserPageModule)
           }
         ]
       },
@@ -24,7 +24,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../profile-mentor/profile-mentor.module').then(m => m.ProfileMentorPageModule)
+                import('../tab2/tab2.module').then(m => m.Tab2PageModule)
           }
         ]
       },
@@ -34,7 +34,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+                import('../settings/settings.module').then(m => m.SettingsPageModule)
           }
         ]
       },

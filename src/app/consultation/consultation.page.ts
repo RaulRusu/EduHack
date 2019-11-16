@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavParamsService} from '../nav-params.service';
 import {ConsultationsService} from '../consultations.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-consultation',
@@ -12,7 +13,8 @@ export class ConsultationPage implements OnInit {
   private consultationID;
   private mentorDetails;
   constructor(private navParams: NavParamsService,
-              private consultationsService: ConsultationsService) { }
+              private consultationsService: ConsultationsService,
+              private router: Router) { }
 
   ngOnInit() {
     this.consultationInformation = this.navParams.popBack();
@@ -30,5 +32,7 @@ export class ConsultationPage implements OnInit {
     }
     return cap;
   }
-
+  openProfileMentor(){
+    this.router.navigate(['/profile-mentor']);
+  }
 }

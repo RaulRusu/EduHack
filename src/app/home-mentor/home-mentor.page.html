@@ -1,8 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>HomeMentor</ion-title>
+  <ion-icon name="exit" (click)="logout()"></ion-icon>  <ion-toolbar>
+    <img src="assets/img/logoBWay_low_res.png" class="bway_image">
   </ion-toolbar>
 </ion-header>
+
 
 <ion-header>
   <ion-toolbar color="primary">
@@ -20,7 +21,7 @@
   <!-- Card for adding a new event -->
   <ion-card>
     <ion-card-header tappable (click)="collapseCard = !collapseCard">
-      <ion-card-title>New Event</ion-card-title>
+      <ion-card-title>New Private Lesson</ion-card-title>
     </ion-card-header>
     <ion-card-content *ngIf="!collapseCard">
 

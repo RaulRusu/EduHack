@@ -17,7 +17,7 @@
       </ion-item>
 
 
-      <ion-item >
+      <ion-item (click)="openProfileMentor()">
 
         <ion-icon size="large" name="contact"></ion-icon>
         <ion-label>
@@ -31,7 +31,7 @@
                               activeColor = "#ffb400"
                               defaultColor = "#aaaaaa"
                               readonly = "true"
-                              rating = "2"
+                              rating = "{{mentorDetails.rating}}"
                               fontSize = "20px">
           </ionic4-star-rating>
         </ion-label>

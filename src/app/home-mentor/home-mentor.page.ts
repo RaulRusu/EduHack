@@ -2,6 +2,7 @@ import { CalendarComponent } from 'ionic2-calendar/calendar';
 import { Component, ViewChild, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { formatDate } from '@angular/common';
+import {AuthServiceService} from '../auth-service.service';
 
 @Component({
   selector: 'app-home-mentor',
@@ -28,7 +29,8 @@ export class HomeMentorPage implements OnInit {
   };
   @ViewChild(CalendarComponent, {static: true})  CalendarComponent;
 
-  constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string) { }
+  constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string,
+              private authService: AuthServiceService) { }
 
   ngOnInit() {
     this.resetEvent();
@@ -63,7 +65,11 @@ export class HomeMentorPage implements OnInit {
     }
 
     this.eventSource.push(eventCopy);
-    this.myCal.loadEvents();
+    // this.myCal.loadEvents();
     this.resetEvent();
+  }
+
+  logout(){
+    this.authService.logOut();
   }
 }

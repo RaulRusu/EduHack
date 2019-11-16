@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Raullll
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content >
 
-<ion-content></ion-content>
+  <ion-list>
+    <ion-list-header class="header">
+      <div class="header_list">
+        Recent conversations:
+      </div>
+    </ion-list-header>
+    <ion-item (click) = "goToMessages()">
+      <ion-avatar slot="start">
+        <img src="../../assets/img/graduate.png">
+      </ion-avatar>
+      <ion-label>
+        Raul Rusu
+      </ion-label>
+      <p>Salut.</p>
+      <ion-note slot="end">
+        18:52
+      </ion-note>
+    </ion-item>
+    <ion-item (click) = "goToMessages()">
+      <ion-avatar slot="start">
+        <img src="../../assets/img/graduate.png">
+      </ion-avatar>
+      <ion-label>Horhat Razvan</ion-label>
+      <p>Buna?</p>
+      <ion-note slot="end">
+        13:43
+      </ion-note>
+    </ion-item>
+    <ion-item (click) = "goToMessages()" >
+      <ion-avatar slot="start">
+        <img src="../../assets/img/graduate.png">
+      </ion-avatar>
+      <ion-label>Andreea Vancea</ion-label>
+      <p>Ok. Salut.</p>
+      <ion-note slot="end">
+        Fri
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header class="header">
+      <div class="header_list">
+        Notifications:
+      </div>
+    </ion-list-header>
+    <ion-item>
+      <p>
+        No new notifications
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

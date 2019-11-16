@@ -8,11 +8,11 @@
   <ion-list lines="none">
     <ion-item lines="none">
       <ion-icon name="person"></ion-icon>
-      <ion-label class="text">Account</ion-label>
+      <ion-label class="text" (click)="openProfileMentor()">Account</ion-label>
     </ion-item>
   </ion-list>
   <ion-footer align="center" >
-    <ion-button color="primary" class="logOut-button" shape="round"> Log Out </ion-button>
+    <ion-button color="primary" class="logOut-button" shape="round" (click)="logout()"> Log Out </ion-button>
   </ion-footer>
 
 </ion-content>

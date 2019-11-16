@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthServiceService} from '../auth-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthServiceService,
+              private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  openProfileMentor(){
+    this.router.navigate(['/profile-mentor']);
+  }
+
+  private logout() {
+    this.authService.logOut();
   }
 
 }

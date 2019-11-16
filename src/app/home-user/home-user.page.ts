@@ -21,16 +21,24 @@ export class HomeUserPage implements OnInit {
   private consultationsListToShow: Array<any>;
   private consultationsKeysToShow: Array<any>;
   private mentorsInformationToShow: Array<any>;
+
+  private consultationsSorted: Array<any>;
+  private consultationsKeysSorted: Array<any>;
+  private mentorsInformationSorted: Array<any>;
+
   constructor(private consultationService: ConsultationsService,
               private navParams: NavParamsService,
               private router: Router) {
-    this.domains = ['mathematics', 'chemistry', 'biology', 'informatics', 'history', 'geography', 'music', 'english', 'career'];
+    this.domains = ['mathematics', 'chemistry', 'biology', 'informatics', 'history', 'geography', 'music', 'languages', 'career'];
     this.consultationsList = new Array<any>();
     this.consultationsKeys = new Array<any>();
     this.mentorsInformation = new Array<any>();
     this.consultationsListToShow = new Array<any>();
     this.consultationsKeysToShow = new Array<any>();
     this.mentorsInformationToShow = new Array<any>();
+    this.consultationsSorted = new Array<any>();
+    this.consultationsKeysSorted = new Array<any>();
+    this.mentorsInformationSorted = new Array<any>();
     this.filter = '';
   }
 
@@ -50,6 +58,9 @@ export class HomeUserPage implements OnInit {
       this.consultationsList = new Array<any>();
       this.consultationsKeys = new Array<any>();
       this.mentorsInformation = new Array<any>();
+      this.consultationsSorted = new Array<any>();
+      this.consultationsKeysSorted = new Array<any>();
+      this.mentorsInformationSorted = new Array<any>();
       const subs = this.consultationService.getAllUsers().valueChanges().subscribe((users) => {
         this.allUsers = users;
         subs.unsubscribe();
@@ -58,6 +69,24 @@ export class HomeUserPage implements OnInit {
             this.consultationsList.push(data[key]);
             this.consultationsKeys.push(key);
             this.mentorsInformation.push(this.allUsers[data[key].mentorID].details);
+            this.consultationsSorted.push(data[key]);
+            this.consultationsKeysSorted.push(key);
+            this.mentorsInformationSorted.push(this.allUsers[data[key].mentorID].details);
+          }
+        }
+        for ( var i = 0; i < this.mentorsInformationSorted.length - 1; i++) {
+          for (var j = i + 1; j < this.mentorsInformationSorted.length; j++) {
+            if (this.mentorsInformationSorted[i].rating < this.mentorsInformationSorted[j].rating) {
+              let aux = this.consultationsSorted[j];
+              this.consultationsSorted[j] = this.consultationsSorted[i];
+              this.consultationsSorted[i] = aux;
+              aux = this.consultationsKeysSorted[j];
+              this.consultationsKeysSorted[j] = this.consultationsKeysSorted[i];
+              this.consultationsKeysSorted[i] = aux;
+              aux = this.mentorsInformationSorted[j];
+              this.mentorsInformationSorted[j] = this.mentorsInformationSorted[i];
+              this.mentorsInformationSorted[i] = aux;
+            }
           }
         }
         this.filterDataBySearch();
@@ -73,7 +102,7 @@ export class HomeUserPage implements OnInit {
       this.consultationsKeysToShow = this.consultationsKeys;
       this.consultationsListToShow = this.consultationsList;
       this.mentorsInformationToShow = this.mentorsInformation;
-    } else {
+    } else if (this.filter !== 'sorted') {
       for (const i in this.consultationsList) {
         if (this.consultationsList[i].subject === this.filter) {
           this.consultationsListToShow.push(this.consultationsList[i]);
@@ -81,6 +110,10 @@ export class HomeUserPage implements OnInit {
           this.mentorsInformationToShow.push(this.mentorsInformation[i]);
         }
       }
+    } else {
+      this.consultationsListToShow = this.consultationsSorted;
+      this.consultationsKeysToShow = this.consultationsKeysSorted;
+      this.mentorsInformationToShow = this.mentorsInformationSorted;
     }
   }
 
@@ -97,5 +130,17 @@ export class HomeUserPage implements OnInit {
 
   setSearchToSubject(domain) {
     this.filter = domain;
+  }
+
+  goToConsultationSortedPage(i) {
+    this.navParams.pushBack(this.mentorsInformationSorted[i]);
+    this.navParams.pushBack(this.consultationsKeysSorted[i]);
+    this.navParams.pushBack(this.consultationsSorted[i]);
+    this.router.navigate(['/consultation']);
+  }
+
+  showMoreSorted() {
+    this.filter = 'sorted';
+    this.filterDataBySearch();
   }
 }

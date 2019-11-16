@@ -44,13 +44,13 @@
         <h3>Top Rated tutoring lessons</h3>
       </ion-text>
 
-      <ion-card class="consultationCard">
+      <ion-card class="consultationCard" (click)="goToConsultationSortedPage(0)">
         <ion-item>
           <ion-icon size="large" name="contact"></ion-icon>
           <ion-label>
-            Razvan Horhat - <div class="domainBold">Mathematics</div>
-  <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
-  <!--          </rating>-->
+            {{mentorsInformationSorted[0]?.firstName}} {{mentorsInformationSorted[0]?.lastName}} - <div class="domainBold">{{consultationsSorted[0]?.subject}}</div>
+            <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
+            <!--          </rating>-->
 
             <ionic4-star-rating #rating
                                 activeIcon = "md-star"
@@ -58,7 +58,7 @@
                                 activeColor = "#ffb400"
                                 defaultColor = "#aaaaaa"
                                 readonly = "true"
-                                rating = "2"
+                                rating = "{{mentorsInformationSorted[0]?.rating}}"
                                 fontSize = "20px">
             </ionic4-star-rating>
           </ion-label>
@@ -67,22 +67,53 @@
         <ion-card-content>
 
           <div class="levelLeft">
-            Intermediate
+            {{consultationsSorted[0]?.level}}
           </div >
           <div class="classRight">
-            9 - 11
+            {{consultationsSorted[0]?.clasa}}
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="consultationCard" (click)="goToConsultationSortedPage(1)">
+        <ion-item>
+          <ion-icon size="large" name="contact"></ion-icon>
+          <ion-label>
+            {{mentorsInformationSorted[1]?.firstName}} {{mentorsInformationSorted[1]?.lastName}} - <div class="domainBold">{{consultationsSorted[1]?.subject}}</div>
+            <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
+            <!--          </rating>-->
+
+            <ionic4-star-rating #rating
+                                activeIcon = "md-star"
+                                defaultIcon = "md-star-outline"
+                                activeColor = "#ffb400"
+                                defaultColor = "#aaaaaa"
+                                readonly = "true"
+                                rating = "{{mentorsInformationSorted[1]?.rating}}"
+                                fontSize = "20px">
+            </ionic4-star-rating>
+          </ion-label>
+        </ion-item>
+
+        <ion-card-content>
+
+          <div class="levelLeft">
+            {{consultationsSorted[1]?.level}}
+          </div >
+          <div class="classRight">
+            {{consultationsSorted[1]?.clasa}}
           </div>
         </ion-card-content>
       </ion-card>
       <div text-right>
-        <ion-button  color="dark" fill="clear" shape="round">Show more</ion-button>
+        <ion-button  color="dark" fill="clear" shape="round" (click)="showMoreSorted()">Show more</ion-button>
       </div>
     </div>
   </div>
 
   <div class="padRightLeft">
     <ion-text>
-    <h3>Suggested for you</h3>
+      <h3>Suggested for you</h3>
     </ion-text>
 
     <div *ngFor="let consultation of consultationsListToShow; let i = index">
