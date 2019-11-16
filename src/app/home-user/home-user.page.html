@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding="0" class="backgroundIMG">
-  <div class="padRight">
+  <div class="padRightLeft">
     <ion-searchbar placeholder="Search tutoring lessons" showCancelButton="focus" [(ngModel)]="filter" (ionChange)="onInputSearchBar($event)"></ion-searchbar>
 
     <div class = "filterButtons">
@@ -20,7 +20,7 @@
 
   <div *ngIf="!filter">
 
-    <div class="padRight">
+    <div class="padRightLeft">
       <ion-text>
         <h3>Domains of interest</h3>
       </ion-text>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="padRight">
+    <div class="padRightLeft">
       <ion-text>
         <h3>Top Rated tutoring lessons</h3>
       </ion-text>
@@ -74,9 +74,13 @@
           </div>
         </ion-card-content>
       </ion-card>
+      <div text-right>
+        <ion-button  color="dark" fill="clear" shape="round">Show more</ion-button>
+      </div>
     </div>
   </div>
-  <div class="padRight">
+
+  <div class="padRightLeft">
     <ion-text>
     <h3>Suggested for you</h3>
     </ion-text>
@@ -114,7 +118,11 @@
       </ion-card>
 
     </div>
+    <div text-right>
+      <ion-button class="showMore" color="dark" fill="clear" shape="round">Show more</ion-button>
+    </div>
   </div>
+
 </ion-content>
 
 

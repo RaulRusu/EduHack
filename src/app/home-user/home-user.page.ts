@@ -4,6 +4,7 @@ import {ConsultationsService} from '../consultations.service';
 import {NavParamsService} from '../nav-params.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home-user',
   templateUrl: './home-user.page.html',
@@ -23,7 +24,7 @@ export class HomeUserPage implements OnInit {
   constructor(private consultationService: ConsultationsService,
               private navParams: NavParamsService,
               private router: Router) {
-    this.domains = ['mathematics', 'informatics', 'biology'];
+    this.domains = ['mathematics', 'chemistry', 'biology', 'informatics', 'history', 'geography', 'music', 'english', 'career'];
     this.consultationsList = new Array<any>();
     this.consultationsKeys = new Array<any>();
     this.mentorsInformation = new Array<any>();

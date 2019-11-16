@@ -11,6 +11,8 @@
 h3{
   font-family: 'Open Sans', sans-serif;
   color: #2c2c2c;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .centeredText{
@@ -36,6 +38,7 @@ ion-content{
   position: relative;
 }
 div.container {
+  margin-left:18px;
   display: inline-flex;
   ion-card{
 
@@ -52,12 +55,15 @@ div.aboveAll{
   position: absolute;
   z-index: 3;
 }
-.padRight{
-  padding-left: 0;
-  padding-right: 16px;
+.padRightLeft{
+  padding-left: 18px;
+  padding-right: 18px;
 }
 .ion-padding, [padding]{
   --padding-end: var(--ion-padding, 0px);
+  --padding-start: var(--ion-padding, 0px);
 }
-
+.showMore{
+  margin-bottom: 0;
+}
 

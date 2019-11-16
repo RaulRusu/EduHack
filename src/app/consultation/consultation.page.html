@@ -1,82 +1,106 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Consultation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding class="backgroundIMG">
-  <ion-card class="mainCard" >
+  <ion-card class="mainCard consultationCard" >
     <ion-card-content>
       <ion-img class="imageCentered" src="../../assets/img/{{consultationInformation.subject}}.png"></ion-img>
 
       <ion-item text-center class="domainCentered">
-        <ion-label>Mathematics</ion-label>
+        <ion-label>{{parseDomain(consultationInformation.subject)}}</ion-label>
       </ion-item>
+
+
+      <ion-item >
+
+        <ion-icon size="large" name="contact"></ion-icon>
+        <ion-label>
+          {{mentorDetails.firstName}} {{mentorDetails.lastName}}
+          <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
+          <!--          </rating>-->
+
+          <ionic4-star-rating #rating
+                              activeIcon = "md-star"
+                              defaultIcon = "md-star-outline"
+                              activeColor = "#ffb400"
+                              defaultColor = "#aaaaaa"
+                              readonly = "true"
+                              rating = "2"
+                              fontSize = "20px">
+          </ionic4-star-rating>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-text style="font-weight: bold; padding-top: 20px;"> Level</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text> {{consultationInformation.level}}</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-text style="font-weight: bold; padding-top: 20px;">Grade</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text> {{consultationInformation.clasa}}</ion-text>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-text style="font-weight: bold; padding-top: 20px;"> Availability</ion-text>
+      </ion-item>
+
+      <ion-grid style="padding:16px 0 0 16px">
+        <ion-row>
+          <ion-col align-self-center>
+            M
+          </ion-col>
+          <ion-col align-self-center class="greyBackground">
+            T
+          </ion-col>
+          <ion-col align-self-center>
+            W
+          </ion-col>
+          <ion-col align-self-center>
+            T
+          </ion-col>
+          <ion-col align-self-center>
+            F
+          </ion-col>
+          <ion-col align-self-center class="greyBackground">
+            S
+          </ion-col>
+          <ion-col align-self-center class="greyBackground">
+            S
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item>
+        <ion-text style="font-weight: bold"> Self Description</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-text style="display: inline-block">
+          {{mentorDetails.selfDescription}}
+        </ion-text>
+      </ion-item>
+
+
+
     </ion-card-content>
-
-    <ion-item class="consultationCard">
-      <ion-icon size="large" name="contact"></ion-icon>
-      <ion-label>
-        {{mentorDetails.firstName}} {{mentorDetails.lastName}} - <div class="domainBold">{{consultationInformation.subject}}</div>
-        <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
-        <!--          </rating>-->
-
-        <ionic4-star-rating #rating
-                            activeIcon = "md-star"
-                            defaultIcon = "md-star-outline"
-                            activeColor = "#ffb400"
-                            defaultColor = "#aaaaaa"
-                            readonly = "true"
-                            rating = "2"
-                            fontSize = "20px">
-        </ionic4-star-rating>
-      </ion-label>
-    </ion-item>
-
-    <ion-list>
-      <ion-item float-left>
-        <div class="levelLeft">
-          {{consultationInformation.level}}
-        </div >
-      </ion-item>
-      <ion-item float-right>
-        <div class="classRight">
-          {{consultationInformation.clasa}}
-        </div>
-      </ion-item>
-
-      <ion-item float-end>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              M
-            </ion-col>
-            <ion-col>
-              T
-            </ion-col>
-            <ion-col>
-              W
-            </ion-col>
-            <ion-col>
-              T
-            </ion-col>
-            <ion-col>
-              F
-            </ion-col>
-            <ion-col>
-              S
-            </ion-col>
-            <ion-col>
-              S
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-    </ion-list>
-
 
   </ion-card>
 
-
+  <div text-center>
+    <ion-button class="showMore" color="primary"  shape="round">Chat with the mentor</ion-button>
+  </div>
 
 </ion-content>

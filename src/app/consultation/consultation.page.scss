@@ -1,9 +1,10 @@
 .imageCentered{
-  width:40%;
+  width:35%;
   margin: 0 auto;
 }
 .mainCard{
   background-color: white;
+  padding-top: 16px;
 }
 .domainCentered{
   text-align: center;
@@ -12,5 +13,16 @@
     color: #2c2c2c;
     font-size: 26px;
   }
-
+}
+.showMore{
+  text-align: center;
+  ion-button{
+    text-align: center;
+  }
+}
+.marginn{
+  margin: 16px 0 0 10px;
+}
+.greyBackground{
+  background-color: #eaeaea;
 }
