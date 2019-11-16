@@ -11,7 +11,7 @@ export class HomeUserPage implements OnInit {
   private domains;
 
   constructor() {
-    this.domains = ['mathematics', 'informatics', 'biology'];
+    this.domains = ['mathematics', 'chemistry', 'biology', 'informatics', 'history', 'geography', 'music', 'english', 'career'];
   }
 
   parseDomain(domain) {

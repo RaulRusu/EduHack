@@ -4,6 +4,79 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding class="backgroundIMG">
+  <ion-card class="mainCard" >
+    <ion-card-content>
+      <ion-img class="imageCentered" src="../../assets/img/mathematics.png"></ion-img>
+
+      <ion-item text-center class="domainCentered">
+        <ion-label>Mathematics</ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-item class="consultationCard">
+      <ion-icon size="large" name="contact"></ion-icon>
+      <ion-label>
+        Razvan Horhat - <div class="domainBold">Mathematics</div>
+        <!--          <rating [(ngModel)]="rate" readonly="true"  size="small">-->
+        <!--          </rating>-->
+
+        <ionic4-star-rating #rating
+                            activeIcon = "md-star"
+                            defaultIcon = "md-star-outline"
+                            activeColor = "#ffb400"
+                            defaultColor = "#aaaaaa"
+                            readonly = "true"
+                            rating = "2"
+                            fontSize = "20px">
+        </ionic4-star-rating>
+      </ion-label>
+    </ion-item>
+
+    <ion-list>
+      <ion-item float-left>
+        <div class="levelLeft">
+          Intermediate
+        </div >
+      </ion-item>
+      <ion-item float-right>
+        <div class="classRight">
+          9 - 11
+        </div>
+      </ion-item>
+
+      <ion-item float-end>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              M
+            </ion-col>
+            <ion-col>
+              T
+            </ion-col>
+            <ion-col>
+              W
+            </ion-col>
+            <ion-col>
+              T
+            </ion-col>
+            <ion-col>
+              F
+            </ion-col>
+            <ion-col>
+              S
+            </ion-col>
+            <ion-col>
+              S
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+
+
+  </ion-card>
+
+
 
 </ion-content>
