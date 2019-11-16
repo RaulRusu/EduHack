@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {ConsultationPage} from '../consultation/consultation.page';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../home-user/home-user.module').then(m => m.HomeUserPageModule)
           }
         ]
       },
