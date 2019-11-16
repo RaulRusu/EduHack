@@ -1,0 +1,53 @@
+.item
+{
+  --background: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.text
+{
+  --background: none;
+  opacity:1;
+  margin: 22px;
+  font-size: 20px;
+}
+.line
+{
+  flex: 1;
+  margin-top: 19px;
+  background-color: #b6b6b6;
+  height: 1px;
+  margin-bottom: 19px;
+}
+.continue
+{
+  color: #8e8e8e;
+  line-height:40px;
+  text-align: center;
+  width: 50px;
+}
+.flex
+{
+  display: flex;
+  justify-content: center;
+}
+.page-margin{
+  margin-top: 10px;
+}
+.date-margin{
+  margin-bottom: 7px;
+}
+.buttons-container{
+  margin-top: 25px;
+  text-align: center;
+}
+.buttons{
+  width: 45%;
+  margin-top: 15px;
+  text-align: center;
+}
+.done-button{
+  margin-top: 15px;
+  text-align: center;
+}

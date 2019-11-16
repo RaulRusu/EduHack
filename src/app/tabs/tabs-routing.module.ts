@@ -34,7 +34,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../register/register.module').then(m => m.RegisterPageModule)
+              import('../register-details/register-details.module').then(m => m.RegisterDetailsPageModule)
           }
         ]
       },

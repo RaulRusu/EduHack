@@ -1,0 +1,35 @@
+
+<ion-content padding class="backgroundIMG">
+  <div class="page-margin">
+    <ion-item>
+      <ion-label position="floating">Gender</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]="gender" >
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="male">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" >Location</ion-label>
+      <ion-input type="text" [(ngModel)] = "location"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >University</ion-label>
+      <ion-input type="text" [(ngModel)] = "university"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" class="date-margin">Birth Date</ion-label>
+      <ion-input type="date" [(ngModel)] = "birthDate"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Self Description</ion-label>
+      <ion-textarea type="text" [(ngModel)] = "selfDescription"></ion-textarea>
+    </ion-item>
+
+    <div class="buttons-container">
+      <div><ion-button color="primary" class="buttons" shape="round" fill="outline">Upload Picture</ion-button></div>
+      <div><ion-button color="primary" class="buttons" shape="round" fill="outline">Upload CV</ion-button></div>
+      <div><ion-button color="primary" class="done-button" shape="round"> Done </ion-button></div>
+    </div>
+  </div>
+</ion-content>
