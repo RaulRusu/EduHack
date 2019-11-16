@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { HomeUserPageRoutingModule } from './home-user-routing.module';
 
 import { HomeUserPage } from './home-user.page';
+import {IonicRatingModule} from 'ionic4-rating/dist';
+import {StarRatingModule} from 'ionic4-star-rating';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeUserPageRoutingModule
+    HomeUserPageRoutingModule,
+    IonicRatingModule,
+    StarRatingModule
   ],
   declarations: [HomeUserPage]
 })

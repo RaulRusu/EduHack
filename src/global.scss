@@ -25,7 +25,30 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+
 .backgroundIMG {
   --background: url(assets/img/background-polygons.png) 0 0/100% 100% no-repeat;
 }
 
+
+.consultationCard{
+  background-color: white;
+  ion-label{
+    padding-left: 8px;
+  }
+  .domainBold{
+    display: inline;
+    font-weight: bold;
+  }
+  .levelLeft{
+    float: left;
+    margin-top: -8px;
+    padding-bottom: 8px;
+  }
+  .classRight{
+    float: right;
+    margin-top: -8px;
+    padding-bottom: 8px;
+  }
+}

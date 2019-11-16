@@ -13,6 +13,8 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
+import {IonicRatingModule} from 'ionic4-rating/dist';
+import {StarRatingModule} from 'ionic4-star-rating';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +25,9 @@ import {environment} from '../environments/environment';
       AppRoutingModule,
       AngularFireModule.initializeApp(environment.firebase),
       AngularFireAuthModule,
-      AngularFireDatabaseModule
+      AngularFireDatabaseModule,
+      IonicRatingModule,
+      StarRatingModule
   ],
   providers: [
     StatusBar,

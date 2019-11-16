@@ -5,4 +5,59 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.filterButtons{
+  padding-bottom: 8px;
+}
+h3{
+  font-family: 'Open Sans', sans-serif;
+  color: #2c2c2c;
+}
+
+.centeredText{
+  padding-top: 8px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #2c2c2c;
+  font-size: 90%;
+}
+.domainCards{
+  display:inline-block;
+
+}
+div[scrollx=true],  div[scrollx=true] {
+  overflow: hidden;
+}
+
+div[scrollx=true] {
+  position: relative;
+  overflow-x: auto;
+}
+ion-content{
+  position: relative;
+}
+div.container {
+  display: inline-flex;
+  ion-card{
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 35vw !important;
+    margin: 10px !important;
+
+  }
+}
+
+div.aboveAll{
+  position: absolute;
+  z-index: 3;
+}
+.padRight{
+  padding-left: 0;
+  padding-right: 16px;
+}
+.ion-padding, [padding]{
+  --padding-end: var(--ion-padding, 0px);
+}
+
 
