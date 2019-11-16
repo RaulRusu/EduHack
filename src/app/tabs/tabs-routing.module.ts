@@ -24,7 +24,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../login/login.module').then(m => m.LoginPageModule)
+              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
           }
         ]
       },
@@ -34,7 +34,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../register-details/register-details.module').then(m => m.RegisterDetailsPageModule)
+              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
           }
         ]
       },

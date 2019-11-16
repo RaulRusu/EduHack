@@ -26,7 +26,6 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.authService.getAuthState().subscribe((data) => {
-        console.log(data);
         if (data === null) {
           this.router.navigateByUrl('/login');
         } else {
