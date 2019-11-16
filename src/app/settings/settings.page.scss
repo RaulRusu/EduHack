@@ -1,0 +1,30 @@
+.item
+{
+  --background: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.image-big{
+  margin: 10px;
+  width: auto;
+  height: auto;
+}
+.text{
+  margin-left: 10px;
+  font-size: 22px;
+}
+.center-item{
+  text-align: center;
+}
+.logOut-button{
+  margin-top: 15px;
+  text-align: center;
+}
+ion-content{
+  ion-footer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+  }
+}
